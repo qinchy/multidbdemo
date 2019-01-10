@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /multidbdemo
+
+spring:
+  datasource:
+    master:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/saasdb?userUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
+      username: root
+      password: admin
+    slaver:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test?userUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false
+      username: root
+      password: admin
+  security:
+    user:
+      name: root
+      password: root
+      roles: root
