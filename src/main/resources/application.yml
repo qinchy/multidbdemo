@@ -69,6 +69,12 @@ spring:
         # 合并多个DruidDataSource的监控数据
         useGlobalDataSourceStat: true
 
+  security:
+    user:
+      name: root
+      password: root
+      roles: root
+
   #jta相关参数配置
   jta:
     log-dir: classpath:tx-logs
