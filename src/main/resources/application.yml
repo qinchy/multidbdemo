@@ -1,7 +1,6 @@
 server:
   port: 8080
-  servlet:
-    context-path: /multidbdemo
+  context-path: /multidbdemo
 
 spring:
   datasource:
@@ -10,7 +9,7 @@ spring:
       master:
         name: master
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/demo?userUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+        url: jdbc:mysql://127.0.0.1:3306/demo?userUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=false
         username: root
         password: admin
         # 下面为连接池的补充设置，应用到上面所有数据源中
@@ -41,7 +40,7 @@ spring:
       slaver:
         name: slaver
         driverClassName: com.mysql.cj.jdbc.Driver
-        url: jdbc:mysql://127.0.0.1:3306/test?userUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=true
+        url: jdbc:mysql://127.0.0.1:3306/test?userUnicode=true&characterEncoding=utf-8&autoReconnect=true&failOverReadOnly=false&useSSL=false
         username: root
         password: admin
         # 下面为连接池的补充设置，应用到上面所有数据源中
