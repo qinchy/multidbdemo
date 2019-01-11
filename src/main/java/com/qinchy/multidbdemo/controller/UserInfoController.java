@@ -16,4 +16,9 @@ public class UserInfoController {
     public boolean getUserInfo(){
         return userInfoService.getUserInfo();
     }
+
+    @RequestMapping("/save")
+    public boolean saveUserInfo(){
+        return userInfoService.saveUserInfo();
+    }
 }
