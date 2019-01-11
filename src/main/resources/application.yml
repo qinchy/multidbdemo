@@ -72,7 +72,6 @@ spring:
     user:
       name: root
       password: root
-      roles: root
 
   #jta相关参数配置
   jta:

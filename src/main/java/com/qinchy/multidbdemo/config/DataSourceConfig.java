@@ -18,7 +18,6 @@ public class DataSourceConfig {
 
     @Bean(name = "masterDataSource")
     @Primary
-    @Autowired
     public DataSource masterDataSource() {
         AtomikosDataSourceBean ds = new AtomikosDataSourceBean();
         Properties prop = build("spring.datasource.druid.master.");
@@ -30,7 +29,6 @@ public class DataSourceConfig {
         return ds;
     }
 
-    @Autowired
     @Bean(name = "slaverDataSource")
     public DataSource slaverDataSource() {
         AtomikosDataSourceBean ds = new AtomikosDataSourceBean();
