@@ -1,5 +1,6 @@
 package com.qinchy.multidbdemo.controller;
 
+import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,7 +18,8 @@ public class MonitorController {
 
     @PostMapping("/receive")
     public boolean receive(@RequestBody Map<String,Object> message){
-        logger.error(message.toString());
+        JSONObject params = new JSONObject(message);
+        logger.error(params.toJSONString());
         return true;
     }
 }
